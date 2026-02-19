@@ -1,0 +1,27 @@
+USE ecommerce;
+
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    password VARCHAR(100)
+);
+
+CREATE TABLE products (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    price DOUBLE,
+    description VARCHAR(255)
+);
+
+CREATE TABLE cart (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    product_id INT,
+    quantity INT
+);
+
+INSERT INTO products (name, price, description) VALUES
+('Laptop', 50000, 'Gaming Laptop'),
+('Mobile', 20000, 'Smartphone'),
+('Headphones', 2000, 'Wireless Headphones');
