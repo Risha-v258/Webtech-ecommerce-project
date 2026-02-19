@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShop</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h2>MyShop</h2>
+
+        <div class="nav-links">
+            <a onclick="scrollToSection('home')">Home</a>
+            <a onclick="scrollToSection('products')">Products</a>
+            <a onclick="scrollToSection('contact')">Contact</a>
+        </div>
+
+        <div>
+            <span class="mode-toggle" onclick="toggleMode()">🌙 Mode</span>
+            <span class="cart" onclick="toggleCart()">🛒 <span id="cart-count">0</span></span>
+            <span id="auth-section"></span>
+        </div>
+    </div>
+
+    <section class="hero" id="home">
+        <div>
+            <h1>Modern Shopping Experience</h1>
+        </div>
+    </section>
+
+    <h2 style="text-align:center;margin-top:40px;" id="products">Products</h2>
+    <div class="products" id="product-list"></div>
+
+    <footer class="footer" id="contact">
+        <h3>Contact Us</h3>
+        <p>Email: support@ecommerce.com</p>
+        <p>Phone: +91 76676 93892</p>
+    </footer>
+
+    <!-- CART SIDEBAR -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <h3>Your Cart</h3>
+        <div id="cart-items"></div>
+        <div class="total">Total: ₹<span id="total-price">0</span></div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+            <h3>Login / Register</h3>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="handleAuth()">Submit</button>
+        </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
