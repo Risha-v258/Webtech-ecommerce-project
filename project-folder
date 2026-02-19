@@ -1,0 +1,20 @@
+WebTechEcommerce
+│
+├── WebContent
+│   ├── index.jsp
+│   ├── login.html
+│   ├── register.html
+│   ├── cart.jsp
+│   ├── css/style.css
+│
+├── src
+│   ├── com.webtech.util
+│   │      DBConnection.java
+│   │
+│   ├── com.webtech.servlet
+│          RegisterServlet.java
+│          LoginServlet.java
+│          AddToCartServlet.java
+│
+└── WEB-INF
+    └── web.xml
